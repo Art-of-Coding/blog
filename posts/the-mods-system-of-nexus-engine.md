@@ -1,6 +1,6 @@
 One of the biggest features of Nexus Engine is its mods interface. The core of
 the engine has been designed to be abstract and extensible, while functionality
-is build into _mods_. Many of what can be considered _core functions_ are
+is built into _mods_. Many of what can be considered _core functions_ are
 implemented as mods themselves!
 
 ## Anatomy of a Mod
