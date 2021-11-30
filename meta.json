@@ -1,5 +1,20 @@
 [
   {
+    "slug": "the-mods-system-of-nexus-engine",
+    "title": "The mods system of Nexus Engine",
+    "description": "The mods system of Nexus Engine is designed to be abstract and extensible. Many of what can be considered *core functions* are implemented as mods themselves! In this post I dive a little deeper into the proposed mods architecture.",
+    "author": {
+      "name": "Michiel van der Velde",
+      "email": "michiel@artofcoding.nl"
+    },
+    "tags": [
+      "Development",
+      "Nexus Engine"
+    ],
+    "published": "2021-11-30T21:45:02.767Z",
+    "content": "./posts/the-mods-system-of-nexus-engine.md"
+  },
+  {
     "slug": "a-new-beginning",
     "title": "A New Beginning",
     "description": "Welcome to the new look! Art of Coding will be changing from my personal repository to something more professional and streamlined. This of course includes the new blog you are currently reading.",
