@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "a-new-beginning",
+    "title": "A New Beginning",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin nibh et sapien malesuada tincidunt. Aenean tempus lorem id suscipit porttitor. Nam ultrices id neque at pretium. Pellentesque dictum placerat velit quis vulputate. Phasellus sed sem est. Cras vel convallis ligula. Donec eget mauris sit amet metus sodales faucibus.",
+    "author": "Michiel van der Velde",
+    "tags": [
+      "Welcome",
+      "Development"
+    ],
+    "published": "2021-11-30T12:50:58.105Z",
+    "content": "./posts/a-new-beginning.md"
+  }
+]
