@@ -1,64 +1,45 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin
-nibh et sapien malesuada tincidunt. Aenean tempus lorem id suscipit porttitor.
-Nam ultrices id neque at pretium. Pellentesque dictum placerat velit quis
-vulputate. Phasellus sed sem est. Cras vel convallis ligula. Donec eget mauris
-sit amet metus sodales faucibus. Ut condimentum ex vitae porttitor consequat.
-Etiam in purus mi. Integer vehicula turpis nec arcu dapibus, non faucibus lacus
-viverra. Suspendisse potenti. Integer non eros lacus. Nam in vestibulum dolor.
-Praesent fringilla venenatis sapien a malesuada. Nam molestie leo nunc, vel
-ultricies nisl consequat in.
+Welcome to the new look! Art of Coding will be changing from my personal
+repository to something more professional and streamlined. This of course
+includes the new blog you are currently reading.
 
-```ts
-export function useMeta(repo: string) {
-  const [meta, setMeta] = useState<Meta | null>(null);
+## No more WordPress
 
-  useEffect(() => {
-    const url = `https://api.github.com/repos/${repo}/contents/meta.json`;
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) =>
-        setMeta(
-          JSON.parse(Buffer.from(data.content, "base64").toString("utf-8")),
-        )
-      )
-      .catch((err) => console.error(err));
-  }, [repo]);
+Let's face it; WordPress is big. Way too big for a simple blog. The alternatives
+I researched each had their own disadvantages, so I decided to make a small CLI
+tool which helps manage a headless blog using Git. This blog is using it right
+now - this post is hosted within a
+[GitHub repository](https://github.com/Art-of-Coding/blog)!
 
-  return meta;
-}
+[BlogGit](https://github.com/Art-of-Coding/bloggit) can now be installed as an
+early alpha. It currently includes the ability to create a new post, and to
+generate a Markdown file containing an overview of all posts. I expect to
+iterate quickly, hopefully releasing a stable version before the end of the
+year.
+
+To get started with BlogGit, all you have to do is run the following command in
+a fresh directory:
+
+```bash
+npx bloggit init
 ```
 
-Donec id erat enim. Vivamus at tempus purus, suscipit porta quam. Mauris id
-mauris ac neque convallis dictum et sit amet enim. Curabitur id enim magna. Nunc
-lectus dui, vestibulum nec tellus vitae, tincidunt tristique nunc. Aliquam
-cursus scelerisque massa in egestas. Sed in tristique augue. Suspendisse velit
-ligula, bibendum id suscipit sit amet, aliquam in felis. Morbi sit amet feugiat
-tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-inceptos himenaeos. Curabitur mattis lorem orci, accumsan eleifend orci tempor
-vitae.
+The wizard will walk you through setting up a Git repository and a `meta.json`,
+the latter contains the blog's metadata.
 
-Vivamus egestas viverra dolor, euismod fringilla elit interdum fermentum.
-Aliquam porttitor sem at libero vestibulum feugiat. Nulla eget pharetra elit, et
-rhoncus libero. Curabitur sagittis ullamcorper nibh eleifend tristique.
-Pellentesque vitae diam congue, ornare ipsum eget, interdum nisl. Nullam ac
-rutrum dolor. Nulla placerat dui et justo fermentum mollis. Mauris congue dictum
-luctus. Curabitur eget nulla non ipsum facilisis sodales at et mi. Nullam eget
-dolor et quam consequat laoreet. Ut sed dapibus ligula, vel fringilla justo. Sed
-sed feugiat sapien.
+## Started work on Nexus Engine
 
-Duis eget purus sit amet nunc vehicula vulputate. Cras mi diam, scelerisque eu
-odio eu, dapibus sodales ex. Morbi ut efficitur mi. Nunc dictum semper sem.
-Maecenas faucibus laoreet nulla eu condimentum. Pellentesque habitant morbi
-tristique senectus et netus et malesuada fames ac turpis egestas. Mauris
-posuere, quam in pellentesque aliquam, diam massa luctus purus, in ultrices nisl
-est quis mi. Curabitur egestas nec tellus id porttitor. Ut nec ipsum risus.
-Nullam vel leo imperdiet, imperdiet justo a, dapibus tellus. Phasellus nisi
-enim, posuere vel lectus sed, rutrum condimentum libero.
+I am excited about my latest project.
+[Nexus Engine](https://github.com/NexusEngine/nexus) will become a
+next-generation text based browser game engine. Wow, that's a mouth-full!
 
-Nam imperdiet vitae ipsum vitae dignissim. Aenean non est pulvinar, accumsan
-mauris nec, dictum sem. Fusce ac mauris ac sem porttitor volutpat. Pellentesque
-nec scelerisque magna, nec cursus est. Ut in porta mauris. Nullam at ex iaculis
-mi lacinia feugiat. Integer varius tortor nec elit finibus, a ultricies neque
-dictum. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Duis tempus urna dui, ut vulputate metus ullamcorper vitae. Nam euismod
-nec dolor nec consectetur.
+The engine will be completely extensible using **mods**. The core of the engine
+will be kept as abstract as possible, allowing the widest possible latitude for
+developers to bring alive their dream projects.
+
+The mods system has been kind of a headache, but I hope to get to something
+workable soon. Since the mods API will be one of the most important parts of the
+engine, I want to make sure it works well.
+
+If you're a developer, you are welcome to contribute to either project!
+
+Thank you for reading and I hope to see you somewhere!
