@@ -8,6 +8,22 @@ viverra. Suspendisse potenti. Integer non eros lacus. Nam in vestibulum dolor.
 Praesent fringilla venenatis sapien a malesuada. Nam molestie leo nunc, vel
 ultricies nisl consequat in.
 
+```language-ts
+export function useMeta(repo: string) {
+  const [meta, setMeta] = useState<Meta | null>(null)
+
+  useEffect(() => {
+    const url = `https://api.github.com/repos/${repo}/contents/meta.json`
+    fetch(url)
+      .then(response => response.json())
+      .then(data => setMeta(JSON.parse(Buffer.from(data.content, 'base64').toString('utf-8'))))
+      .catch(err => console.error(err))
+  }, [repo])
+
+  return meta
+}
+```
+
 Donec id erat enim. Vivamus at tempus purus, suscipit porta quam. Mauris id
 mauris ac neque convallis dictum et sit amet enim. Curabitur id enim magna. Nunc
 lectus dui, vestibulum nec tellus vitae, tincidunt tristique nunc. Aliquam
