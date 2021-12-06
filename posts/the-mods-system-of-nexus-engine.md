@@ -12,7 +12,7 @@ proposed mods architecture.
 Enabled mods are loaded on engine startup, and the various providers they export
 are imported at various stages during the engine's lifecycle.
 
-> ### TypeScript: enable global types
+> #### Enable global types (TypeScript)
 >
 > If you're using TypeScript, you can enable the engine's global types by adding
 > the engine to the `types` array in your `tsconfig.json`:
@@ -117,7 +117,7 @@ async function checkUser(context: IntentContext) {
 }
 
 async function checkBalance(userId: string, amount: number) {
-  if (Memory.get() < amount) {
+  if (Memory.get(`balances:${context.userId}`) < amount) {
     throw new Error("Not enough money");
   }
 }
