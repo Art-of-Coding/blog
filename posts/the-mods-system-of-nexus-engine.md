@@ -121,7 +121,7 @@ async function checkUser(context: IntentContext) {
 }
 
 async function checkBalance(userId: string, amount: number) {
-  if (Memory.get(`balances:${context.userId}`) < amount) {
+  if (await Memory.get(`balances:${context.userId}`) < amount) {
     throw new Error("Not enough money");
   }
 }
