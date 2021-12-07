@@ -52,6 +52,8 @@ export const manifest: Manifest = {
 >   },
 > };
 > ```
+>
+> Note that you have to be specific, including the file extension!
 
 ### Implementing a Game Object
 
@@ -92,10 +94,12 @@ export class Stock extends GameObject<StockShape> {
     await chainIntentChecks(
       () => checkUser(context),
       () => checkBalance(context.userId, amount * this.price),
-      () => Game.executeIntent(this, context, amount),
+      () => Game.executeIntent(this, "buy", context, amount),
     );
   }
 }
+
+Game.registerObject(Stock);
 ```
 
 The intent method receives `IntentContext` as its first argument. The arguments
@@ -140,9 +144,18 @@ Game.registerIntentProcessor(
 );
 ```
 
+The last line registers our new game object with the engine:
+
+```ts
+Game.registerObject(Stock);
+```
+
+Now the engine knows about our game object.
+
 You have just implemented a game object with an intent!
 
-The mods interface is currently very fluid and subject to quick change.
+> Please note: The mods interface is currently very fluid and subject to quick
+> change.
 
 ## Contribute
 
